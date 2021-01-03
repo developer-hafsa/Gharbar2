@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "431178619573",
+    "project_id": "ghar-bar",
+    "storage_bucket": "ghar-bar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431178619573:android:9fb6abf54f6b8c8350bcfc",
+        "android_client_info": {
+          "package_name": "com.example.gharbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431178619573-8gm4uf6ohr2n1se5d8qsso2p279r5es7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gharbar",
+            "certificate_hash": "3cf5970c618f5298b69406550d1016f6eb91e962"
+          }
+        },
+        {
+          "client_id": "431178619573-hjvro0c3b9251d206t42eo3qjjdmemnm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDod6SccT4kStH93IfEwPwO4ZOdva-pGbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431178619573-hjvro0c3b9251d206t42eo3qjjdmemnm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

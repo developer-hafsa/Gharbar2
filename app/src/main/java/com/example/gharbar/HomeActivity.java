@@ -12,5 +12,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toast.makeText(this, "success", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "henldn", Toast.LENGTH_SHORT).show();
     }
 }
