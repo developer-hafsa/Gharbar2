@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval_buttons"
+        android:text="Sign Up"
+        android:textColor="#F9FAF8"
+        android:layout_marginTop="400dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/timesnewroman"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signin"
+        android:background="@drawable/oval_buttons"
+        android:text="sign in"
+        android:textColor="#F2F0F6"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/timesnewroman"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_centerInParent="true"
+
+        android:layout_below="@id/signup"
+        android:layout_marginTop="15dp"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="190dp"
+        android:layout_height="73dp"
+        android:fontFamily="@font/ringbearer"
+        android:text="Ghar bar"
+        android:textColor="#5AAC11"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+         />
+</RelativeLayout>
