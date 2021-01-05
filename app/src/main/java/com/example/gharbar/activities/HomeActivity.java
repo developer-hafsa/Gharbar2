@@ -1,9 +1,11 @@
-package com.example.gharbar;
+package com.example.gharbar.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.example.gharbar.R;
 
 public class HomeActivity extends AppCompatActivity {
 
