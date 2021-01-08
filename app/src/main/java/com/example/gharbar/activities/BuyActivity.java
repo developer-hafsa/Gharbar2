@@ -9,6 +9,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.example.gharbar.R;
+import com.example.gharbar.fragments.FlatsFragment;
 import com.example.gharbar.fragments.HousesFragment;
 import com.example.gharbar.fragments.PlotsFragment;
 import com.example.gharbar.fragments.ShopsFragment;
@@ -38,6 +39,7 @@ public class BuyActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(new HousesFragment(), "Houses");
         viewPagerAdapter.addFragment(new ShopsFragment(), "Shops");
         viewPagerAdapter.addFragment(new PlotsFragment(),"Plots");
+        viewPagerAdapter.addFragment(new FlatsFragment(), "Flats");
         viewPager.setAdapter(viewPagerAdapter);
     }
 

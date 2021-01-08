@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.BuyActivity"></activity>
+        <activity android:name=".activities.RentActivity"></activity>
+        <activity android:name=".activities.SellActivity" />
+        <activity android:name=".activities.BuyActivity" />
         <activity android:name=".activities.HomeActivity" />
         <activity android:name=".activities.WelcomeActivity" />
         <activity android:name=".activities.SigninActivity" />

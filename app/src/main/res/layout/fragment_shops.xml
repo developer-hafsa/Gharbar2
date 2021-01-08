@@ -6,16 +6,216 @@
     tools:context=".fragments.ShopsFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Shops"
-        android:fontFamily="@font/poppinslight"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select City"
+            android:textColor="#030007"
+            android:id="@+id/city"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="18sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:id="@+id/ask_location"
+            android:text="Current location"
+            android:background="@drawable/oval_buttons"
+            android:layout_below="@id/city"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/poppinslight"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:textColor="#F7F6F8"
+            />
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:id="@+id/select_city"
+            android:background="@drawable/oval_buttons"
+            android:layout_below="@id/city"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/ask_location"
+            android:text="+ Add city"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinslight"
+            android:textSize="15dp"
+            android:textColor="#F7F6F8"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textColor="#030007"
+            android:id="@+id/price_text"
+            android:fontFamily="@font/poppinsmedium"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@id/ask_location"
+            android:layout_marginTop="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/price"
+            android:layout_below="@id/price_text"
+            android:max="200"
+            android:progress="50"
+            android:progressTint="#E4549A05"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:thumbTint="#E4549A05"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Area (SQFT)"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#030007"
+            android:id="@+id/land_size"
+            android:layout_below="@id/price"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"/>
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     5 Marla"
+            android:layout_below="@id/land_size"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="#030007"
+            android:fontFamily="@font/poppinslight"
+            android:textSize="15sp"
+            android:buttonTint="#E4549A05"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     7 Marla"
+            android:layout_below="@id/radioButton1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:checked="false"
+            android:textColor="#030007"
+            android:fontFamily="@font/poppinslight"
+            android:textSize="15sp"
+            android:buttonTint="#E4549A05"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Area type"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#030007"
+            android:id="@+id/area_type"
+            android:layout_below="@id/radioButton2"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     Commercial"
+            android:fontFamily="@font/poppinslight"
+            android:id="@+id/commercial"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@id/area_type"
+            android:textSize="15sp"
+            android:textColor="#030007"
+            android:buttonTint="#E4549A05"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     Non-commercial"
+            android:fontFamily="@font/poppinslight"
+            android:id="@+id/non_commercial"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@id/commercial"
+            android:textSize="15sp"
+            android:textColor="#030007"
+            android:buttonTint="#E4549A05"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Listing type"
+            android:fontFamily="@font/poppinsmedium"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#030007"
+            android:id="@+id/listing_type"
+            android:layout_below="@id/non_commercial"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     Furnished"
+            android:fontFamily="@font/poppinslight"
+            android:id="@+id/furnished"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@id/listing_type"
+            android:textSize="15sp"
+            android:textColor="#030007"
+            android:buttonTint="#E4549A05"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="     Unfurnished"
+            android:fontFamily="@font/poppinslight"
+            android:id="@+id/Unfurnished"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@id/furnished"
+            android:textSize="15sp"
+            android:textColor="#030007"
+            android:buttonTint="#E4549A05"/>
+
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:id="@+id/search"
+            android:text="Search"
+            android:textStyle="bold"
+            android:background="@drawable/oval_buttons"
+            android:layout_below="@id/Unfurnished"
+            android:fontFamily="@font/poppinslight"
+            android:layout_marginTop="30dp"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:textColor="#F7F6F8"
+            />
     </RelativeLayout>
+    </ScrollView>
 </FrameLayout>

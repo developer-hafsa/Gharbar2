@@ -21,8 +21,8 @@
             android:id="@+id/back"/>
 
         <ImageView
-            android:layout_height="40dp"
-            android:layout_width="40dp"
+            android:layout_height="38dp"
+            android:layout_width="38dp"
             android:id="@+id/img1"
             android:layout_marginTop="10dp"
             android:src="@drawable/logo_white"
@@ -39,8 +39,8 @@
             android:textStyle="bold"
             android:textColor="#FDFDFD"
             android:textSize="25sp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/img1"
             />
 
@@ -49,12 +49,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/buy"
             android:text="Buy"
-            android:fontFamily="@font/poppinslight"
+            android:fontFamily="@font/poppinsmedium"
             android:textStyle="bold"
             android:textColor="#FDFDFD"
             android:textSize="40sp"
             android:layout_marginTop="60dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="90dp"
             />
 
         <TextView
@@ -62,10 +62,11 @@
             android:layout_height="wrap_content"
             android:id="@+id/buy1"
             android:text="خریدیں"
+            android:fontFamily="@font/jameelnooriregular"
             android:textSize="40sp"
             android:textStyle="bold"
             android:textColor="#FDFDFD"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:layout_marginLeft="50dp"
             android:layout_toRightOf="@id/buy"/>
 
@@ -88,10 +89,16 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tab_layout"
                 app:tabMode="fixed"
-                app:tabGravity="fill"/>
+                app:tabGravity="fill"
+                app:tabIndicatorColor="#E4549A05"
+                app:tabSelectedTextColor="#E4549A05"
+                />
 
         </androidx.viewpager.widget.ViewPager>
 
+
+
     </RelativeLayout>
+
 
 </RelativeLayout>
