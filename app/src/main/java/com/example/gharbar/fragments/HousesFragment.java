@@ -4,10 +4,15 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.crystal.crystalrangeseekbar.interfaces.OnRangeSeekbarChangeListener;
+import com.crystal.crystalrangeseekbar.interfaces.OnRangeSeekbarFinalValueListener;
+import com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar;
 import com.example.gharbar.R;
 
 /**
@@ -54,6 +59,7 @@ public class HousesFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
@@ -61,6 +67,42 @@ public class HousesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_houses, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_houses, container, false);
+
+        final CrystalRangeSeekbar rangeSeekbar = (CrystalRangeSeekbar) rootView.findViewById(R.id.price);
+        final TextView tvMin = (TextView) rootView.findViewById(R.id.min);
+        final TextView tvMax = (TextView) rootView.findViewById(R.id.max);
+        // set listener
+        rangeSeekbar.setOnRangeSeekbarChangeListener(new OnRangeSeekbarChangeListener() {
+
+        @Override
+        public void valueChanged(Number minValue, Number maxValue) {
+
+            tvMin.setText(String.valueOf(minValue));
+
+            tvMax.setText(String.valueOf(maxValue));
+
+
+        }
+
+    }
+);
+    // set final value listener
+        rangeSeekbar.setOnRangeSeekbarFinalValueListener(new OnRangeSeekbarFinalValueListener() {
+
+    @Override
+    public void finalValue(Number minValue, Number maxValue) {
+
+        Log.d("CRS=>", String.valueOf(minValue) + " : " + String.valueOf(maxValue));
+
+
+    }
+
+}
+);
+
+
+        return rootView;
+
     }
 }

@@ -3,8 +3,27 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+<!--    <style name="spinner">-->
+<!--        <item name="android:background">@drawable/square_button_grey</item>-->
+<!--        <item name="android:layout_toRightOf">@id/garden</item>-->
+<!--        <item name="android:layout_below">@id/others</item>-->
+<!--        <item name="android:layout_marginTop">12dp</item>-->
+<!--        <item name="android:layout_marginLeft">30dp</item>-->
+<!--        <item name="fontFamily">@font/poppinslight</item>-->
+<!--        <item name="android:textSize">14sp</item>-->
+<!--        <item name="android:padding">3dp</item>-->
+<!--        <item name="maxLines">1</item>-->
+<!--        <item name="android:gravity">center</item>-->
+<!--        <item name="android:inputType">textNoSuggestions</item>-->
+<!--        <item name="android:focusableInTouchMode">true</item>-->
+<!--        <item name="android:clickable">true</item>-->
+<!--        <item name="elevation">5dp</item>-->
+<!--        <item name="android:drawableRight">@drawable/ic_icon_spinner</item>-->
+<!--        <item name="android:hint">Select</item>-->
+
+<!--    </style>-->
 
 </resources>

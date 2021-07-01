@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/colorDarkGrey"
+        android:layout_margin="15dp"
+        android:textSize="14dp"
+        android:text="Add Category" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:fontFamily="@font/poppinslight"
+        android:textColor="@color/colorGrey"
+        android:textSize="14dp"
+        android:layout_margin="15dp"
+        android:padding="8dp"
+        android:hint="Enter Category name"
+         />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/oval_buttons"
+        android:textColor="#F9FAF8"
+        android:fontFamily="@font/poppinslight"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="15dp"
+        android:text="Save" />
+</LinearLayout>

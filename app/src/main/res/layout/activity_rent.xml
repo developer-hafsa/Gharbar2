@@ -54,7 +54,7 @@
             android:textColor="#FDFDFD"
             android:textSize="40sp"
             android:layout_marginTop="60dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="70dp"
             />
 
         <TextView
@@ -83,24 +83,21 @@
         android:layout_below="@id/upper">
 
         <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/pager">
+            android:layout_height="match_parent">
 
             <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tab_layout"
                 app:tabGravity="fill"
-                app:tabSelectedTextColor="#E4549A05"
                 app:tabIndicatorColor="#E4549A05"
-                app:tabMode="fixed"/>
-
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="#E4549A05" />
 
 
         </androidx.viewpager.widget.ViewPager>
-
-
 
 
     </RelativeLayout>

@@ -11,7 +11,7 @@ import com.example.gharbar.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    Button btnSignUp, btnSignIn, btn, btn1, btn2;
+    Button btnSignUp, btnSignIn, btn, btn1, btn2, btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class WelcomeActivity extends AppCompatActivity {
         btn= findViewById(R.id.button);
         btn1 = findViewById(R.id.button1);
         btn2= findViewById(R.id.button2);
+        btn3= findViewById(R.id.button3);
 
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +54,13 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(WelcomeActivity.this, RentActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(WelcomeActivity.this, AdminActivity.class);
                 startActivity(intent);
             }
         });

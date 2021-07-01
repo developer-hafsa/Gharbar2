@@ -58,42 +58,70 @@
         android:elevation="20dp"
         >
 
-
-
-        <EditText
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email Address"
-            android:backgroundTint="#DF979797"
-            android:id="@+id/email"
-            android:layout_marginTop="45dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:textColorHint="#DF979797"
-            android:fontFamily="@font/poppinslight"
-            android:textSize="12sp"
-            android:drawableRight="@drawable/ic_envelope"
-            />
+            android:id="@+id/email_layout">
 
-        <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/email_1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address"
+                    android:id="@+id/email"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:textColorHint="#DF979797"
+                    android:fontFamily="@font/poppinslight"
+                    android:textSize="12sp"/>
+                <!--            android:drawableRight="@drawable/ic_envelope"-->
+
+
+<!--                <ImageView-->
+<!--                    android:layout_width="15dp"-->
+<!--                    android:layout_height="15dp"-->
+<!--                    android:src="@drawable/ic_envelope"-->
+<!--                    android:layout_marginLeft="320dp"-->
+<!--                    android:layout_marginTop="55dp"/>-->
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:backgroundTint="#DF979797"
-            android:id="@+id/password"
-            android:layout_marginTop="35dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:textColorHint="#DF979797"
-            android:fontFamily="@font/poppinslight"
-            android:textSize="12sp"
-            android:layout_below="@id/email"
-            android:drawableRight="@drawable/ic_visibility"
-            />
+            android:id="@+id/pass_layout"
+            android:layout_below="@id/email_layout">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/pass_1">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:id="@+id/password"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:textColorHint="#DF979797"
+                    android:fontFamily="@font/poppinslight"
+                    android:textSize="12sp"
+                    android:layout_below="@id/email_layout"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+
 
         <Button
             android:layout_width="match_parent"
@@ -107,7 +135,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:layout_below="@id/password"
+            android:layout_below="@id/pass_layout"
             android:layout_marginTop="35dp"/>
 
         <TextView
@@ -128,7 +156,7 @@
             android:text="Create account"
             android:id="@+id/create"
             android:fontFamily="@font/poppinslight"
-            android:textColor="#DD3B3A3C"
+            android:textColor="@color/colorGrey"
             android:textSize="13sp"
             android:textStyle="bold"
             android:layout_below="@id/button1"

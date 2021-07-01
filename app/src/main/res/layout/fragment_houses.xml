@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HousesFragment">
 
 
@@ -12,12 +13,12 @@
         android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select City"
-        android:textColor="#030007"
+        android:textColor="@color/colorGrey"
         android:id="@+id/city"
         android:textStyle="bold"
         android:fontFamily="@font/poppinsmedium"
@@ -59,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Price"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:id="@+id/price_text"
             android:fontFamily="@font/poppinsmedium"
             android:textStyle="bold"
@@ -68,19 +69,56 @@
             android:layout_below="@id/ask_location"
             android:layout_marginTop="15dp"/>
 
-        <androidx.appcompat.widget.AppCompatSeekBar
+        <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/price"
             android:layout_below="@id/price_text"
-            android:max="200"
-            android:progress="50"
-            android:progressTint="#E4549A05"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:thumbTint="#E4549A05"
+            app:corner_radius="2"
+            app:min_value="1000000"
+            app:max_value="20000000"
+            app:bar_color="#E49E9F9C"
+            app:bar_highlight_color="#E4549A05"
+            app:left_thumb_color="#E4549A05"
+            app:right_thumb_color="#E4549A05"
+            app:left_thumb_color_pressed="@color/colorGreen"
+            app:right_thumb_color_pressed="@color/colorGreen"
+            app:data_type="_integer"
             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/min"
+            android:layout_below="@id/price"
+            android:layout_marginLeft="10dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/max"
+            android:layout_below="@id/price"
+            android:layout_marginLeft="250dp"
+
+            />
+
+<!--        <androidx.appcompat.widget.AppCompatSeekBar-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/price"-->
+<!--            android:layout_below="@id/price_text"-->
+<!--            android:max="200"-->
+<!--            android:progress="50"-->
+<!--            android:progressTint="#E4549A05"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:thumbTint="#E4549A05"-->
+<!--            />-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -89,7 +127,7 @@
             android:fontFamily="@font/poppinsmedium"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:id="@+id/land_size"
             android:layout_below="@id/price"
             android:layout_marginTop="15dp"
@@ -103,7 +141,7 @@
             android:layout_below="@id/land_size"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="30dp"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:fontFamily="@font/poppinslight"
             android:textSize="15sp"
             android:buttonTint="#E4549A05"
@@ -119,7 +157,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
             android:checked="false"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:fontFamily="@font/poppinslight"
             android:textSize="15sp"
             android:buttonTint="#E4549A05"/>
@@ -132,7 +170,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
             android:checked="false"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:fontFamily="@font/poppinslight"
             android:textSize="15sp"
             android:buttonTint="#E4549A05"/>
@@ -145,7 +183,7 @@
             android:checked="false"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:fontFamily="@font/poppinslight"
             android:textSize="15sp"
             android:buttonTint="#E4549A05"/>
@@ -157,7 +195,7 @@
             android:fontFamily="@font/poppinsmedium"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:id="@+id/bedroom"
             android:layout_below="@id/radioButton4"
             android:layout_marginTop="15dp"
@@ -248,7 +286,7 @@
             android:fontFamily="@font/poppinsmedium"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:id="@+id/listing_type"
             android:layout_below="@id/bed_button1"
             android:layout_marginTop="15dp"
@@ -264,7 +302,7 @@
             android:layout_marginLeft="30dp"
             android:layout_below="@id/listing_type"
             android:textSize="15sp"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:buttonTint="#E4549A05"/>
 
         <CheckBox
@@ -277,7 +315,7 @@
             android:layout_marginLeft="30dp"
             android:layout_below="@id/furnished"
             android:textSize="15sp"
-            android:textColor="#030007"
+            android:textColor="@color/colorGrey"
             android:buttonTint="#E4549A05"/>
 
         <Button

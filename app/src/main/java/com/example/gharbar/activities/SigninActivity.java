@@ -3,6 +3,7 @@ package com.example.gharbar.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.example.gharbar.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -40,11 +42,17 @@ public class SigninActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
         getSupportActionBar().hide();
+        final TextInputLayout email_layout = (TextInputLayout) findViewById(R.id.email_1);
+        final TextInputLayout pass_layout = (TextInputLayout) findViewById(R.id.pass_1);
         etEmail=findViewById(R.id.email);
         etPassword=findViewById(R.id.password);
         btnSignin= findViewById(R.id.button1);
         Create= findViewById(R.id.create);
         mAuth= FirebaseAuth.getInstance();
+
+        email_layout.setHint("Email Address");
+        pass_layout.setHint("Password");
+
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,11 +79,16 @@ public class SigninActivity extends AppCompatActivity {
         Create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent= new Intent(SigninActivity.this, WelcomeActivity.class);
                 startActivity(intent);
+
             }
         });
 
 
     }
+
+
+
 }

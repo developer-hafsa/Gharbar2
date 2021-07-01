@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gharbar">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".utills.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
@@ -10,7 +13,15 @@
         android:roundIcon="@mipmap/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.RentActivity"></activity>
+        <activity android:name=".activities.SignUpActivity"></activity>
+        <activity android:name=".AddImages" />
+        <activity android:name=".activities.AdminAddCategoryActivity" />
+        <activity android:name=".activities.sell_plots" />
+        <activity android:name=".activities.sell_flats" />
+        <activity android:name=".activities.sell_shops" />
+        <activity android:name=".activities.sell_house" />
+        <activity android:name=".activities.AdminActivity" />
+        <activity android:name=".activities.RentActivity" />
         <activity android:name=".activities.SellActivity" />
         <activity android:name=".activities.BuyActivity" />
         <activity android:name=".activities.HomeActivity" />

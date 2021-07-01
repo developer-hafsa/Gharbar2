@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Ghar bar</string>
     <string name="large_text">
+        <string name="api_key">AIzaSyDod6SccT4kStH93IfEwPwO4ZOdva-pGbY</string>
         "Material is the metaphor.\n\n"
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
